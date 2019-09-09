@@ -134435,7 +134435,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
     data: function data() {
         return {
-            text: "Yepi I have figured out how to create vue components in laravel asgard"
+            text: "Yepi I have figured out how to create vue components"
         };
     }
 };
