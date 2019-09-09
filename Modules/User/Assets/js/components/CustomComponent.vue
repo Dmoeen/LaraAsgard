@@ -1,7 +1,6 @@
 <template>
     <h1>
        {{text}}
-       {{textnew}}
     </h1>
 </template>
 <script>
