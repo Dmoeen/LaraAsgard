@@ -134411,7 +134411,7 @@ exports = module.exports = __webpack_require__(43)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -134426,6 +134426,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+//
 //
 //
 //
@@ -134448,7 +134449,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("\n   " + _vm._s(_vm.text) + "\n")])
+  return _c("h1", [
+    _vm._v("\n   " + _vm._s(_vm.text) + "\n   " + _vm._s(_vm.textnew) + "\n")
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
