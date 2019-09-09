@@ -7,11 +7,6 @@
 [![PHP7 Compatible](https://img.shields.io/badge/php-7-green.svg?style=flat-square)](https://packagist.org/packages/asgardcms/platform)
 
 ## AsgardCMS Platform
+This repository is for learning.
 
-View the documentation at [AsgardCMS.com/docs](http://asgardcms.com/docs/).
 
-Join the conversation on Slack [![Slack](http://slack.asgardcms.com/badge.svg)](http://slack.asgardcms.com/)
-
-## License
-
-The AsgardCMS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
