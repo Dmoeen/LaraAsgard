@@ -7,7 +7,7 @@
     export default {
         data(){
             return{
-                text:"Yepi I have figured out how to create vue components in laravel asgard",
+                text:"Yepi I have figured out how to create vue components",
             }
         }
     }
