@@ -134411,7 +134411,7 @@ exports = module.exports = __webpack_require__(43)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -134431,12 +134431,11 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 exports.default = {
     data: function data() {
         return {
-            text: "Yepi I have figured out how to create vue components in laravel asgard"
+            text: "Yepi I have figured out how to create vue components"
         };
     }
 };
@@ -134449,9 +134448,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [
-    _vm._v("\n   " + _vm._s(_vm.text) + "\n   " + _vm._s(_vm.textnew) + "\n")
-  ])
+  return _c("h1", [_vm._v("\n   " + _vm._s(_vm.text) + "\n")])
 }
 var staticRenderFns = []
 render._withStripped = true

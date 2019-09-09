@@ -1,7 +1,9 @@
 /vendor
 /node_modules
 /public/storage
+/.idea/
+/.idea/workspace.xml
+
 Homestead.yaml
 Homestead.json
-.env
 .php_cs.cache
