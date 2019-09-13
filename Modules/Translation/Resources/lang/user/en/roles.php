@@ -3,12 +3,12 @@
 return [
     'new-role' => 'New role',
     'title' => [
-        'roles' => 'Roles',
+        'roles' => 'Role',
         'edit' => 'Edit role',
         'users-with-roles' => 'Users with this role',
     ],
     'breadcrumb' => [
-        'roles' => 'Roles',
+        'roles' => 'Role',
         'new' => 'New',
         'edit' => 'Edit role',
     ],

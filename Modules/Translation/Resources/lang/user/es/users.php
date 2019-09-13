@@ -19,7 +19,7 @@ return [
     ],
     'tabs' => [
         'data' => 'Datos',
-        'roles' => 'Roles',
+        'roles' => 'Role',
         'permissions' => 'Permisos',
         'new password' => 'Nueva contraseña',
         'or send reset password mail' => 'o, enviar correo electrónico para restablecer contraseña',
