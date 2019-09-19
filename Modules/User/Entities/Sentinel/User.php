@@ -131,4 +131,11 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
 
         return $permissions->hasAccess($permission);
     }
+
+
+//    public function institues(){
+//        return $this->belongsToMany(Institutes::class,'institute_users','user_id','institute_id');
+//    }
+
+
 }

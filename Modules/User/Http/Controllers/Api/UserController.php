@@ -50,8 +50,10 @@ class UserController extends Controller
     {
         $data = $this->mergeRequestWithPermissions($request);
 
-        $this->user->createWithRoles($data, $request->get('roles'), $request->get('is_activated'));
+//        $this->user->createWithRoles($data, $request->get('roles'), $request->get('is_activated'));
+        $institute=array(0=>1);
 
+        dd($this->user->createWithInstitute($data, $institute, true));
         return response()->json([
             'errors' => false,
             'message' => trans('user::messages.user created'),

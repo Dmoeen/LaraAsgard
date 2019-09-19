@@ -1,0 +1,18 @@
+{
+    "name": "ProductManagement",
+    "alias": "productmanagement",
+    "description": "",
+    "keywords": [],
+    "version": "1.0.0",
+	"active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\ProductManagement\\Providers\\ProductManagementServiceProvider",
+        "Modules\\ProductManagement\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        
+    ],
+    "requires": []
+}

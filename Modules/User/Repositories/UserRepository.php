@@ -32,6 +32,7 @@ interface UserRepository
      * @param bool $activated
      */
     public function createWithRoles($data, $roles, $activated = false);
+    public function createWithInstitute($data, $institutes, $activated = false);
 
     /**
      * Create a user and assign roles to it
