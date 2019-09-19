@@ -52,7 +52,7 @@
                                     </a>
                                 </td>  <td>
                                     {{--<a href="{{ route('admin.productmanagement.subcategory.edit', [$subcategory->id]) }}">--}}
-                                        <img src="http://jazbafoods.com.pk/photos/{{ $subcategory->photo }}" alt="Smiley face" height="62" width="62">
+                                        <img class="img-thumbnail" src="http://jazbafoods.com.pk/photos/{{ $subcategory->photo }}" alt="Smiley face" height="62" width="162">
                                     {{--</a>--}}
                                 </td>
                                 <td>

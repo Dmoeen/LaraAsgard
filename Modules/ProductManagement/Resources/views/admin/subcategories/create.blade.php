@@ -14,7 +14,7 @@
 @section('content')
     {!! Form::open(['route' => ['admin.productmanagement.subcategory.store'], 'method' => 'post']) !!}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-10">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -32,6 +32,19 @@
                     </div>
                 </div>
             </div> {{-- end nav-tabs-custom --}}
+        </div>
+        <div class="col-md-2">
+            <div class="box box-primary">
+                <div class="box-body">
+            <div class="form-group"{{ $errors->has("category_id") ? ' has-error' : '' }} >
+                <!-- institute input -->
+                <label>{{ trans('productmanagement::productmanagements.form.select-category') }}</label>
+                {!! Form::select('category_id', $categorys,old('category_id'),['class'=>'form-control select2','id'=>'category-id','data-placeholder' => trans("productmanagement::productmanagements.form.select-category"),'required' => 'required']) !!}
+                {!! $errors->first("category_id", '<span style="color:red" class="help-block">:message</span>') !!}
+            </div>
+                </div>
+            </div>
+
         </div>
     </div>
     {!! Form::close() !!}
@@ -63,6 +76,7 @@
                 checkboxClass: 'icheckbox_flat-blue',
                 radioClass: 'iradio_flat-blue'
             });
+            $('#category-id').select2();
         });
     </script>
 @endpush

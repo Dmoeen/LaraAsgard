@@ -5,6 +5,7 @@ namespace Modules\ProductManagement\Repositories\Eloquent;
 
 use Illuminate\Support\Facades\DB;
 use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
+use Modules\ProductManagement\Entities\Category;
 use Modules\ProductManagement\Entities\Subcategory;
 use Modules\ProductManagement\Repositories\SubcategoryRepository;
 
@@ -19,5 +20,13 @@ class EloquentSubcategoryRepository extends EloquentBaseRepository implements Su
             ->join('productmanagement__categories','productmanagement__categories.id','productmanagement__subcategories.category_id')
             ->where('productmanagement__subcategories.status','=',1)->get();
 
+    }
+
+    public function getAllCategoriesForDropDown()
+    {
+        $res = Category::pluck('name','id');
+
+
+        return $res;
     }
 }

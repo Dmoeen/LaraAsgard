@@ -51,7 +51,9 @@ class SubcategoryController extends AdminBaseController
      */
     public function create()
     {
-        return view('productmanagement::admin.subcategories.create');
+        $categorys=$this->subcategory->getAllCategoriesForDropDown();
+
+        return view('productmanagement::admin.subcategories.create',compact('categorys'));
     }
 
     /**
