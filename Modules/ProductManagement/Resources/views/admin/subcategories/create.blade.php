@@ -14,7 +14,7 @@
 @section('content')
     {!! Form::open(['route' => ['admin.productmanagement.subcategory.store'], 'method' => 'post']) !!}
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-3">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -24,6 +24,7 @@
                         <div class="tab-pane {{ locale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
                             @include('productmanagement::admin.subcategories.partials.create-fields', ['lang' => $locale])
                         </div>
+                            @mediaSingle('subcategory_images',$subcategory)
                     @endforeach
 
                     <div class="box-footer">

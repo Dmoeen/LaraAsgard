@@ -21,4 +21,9 @@ return [
     ],
     'validation' => [
     ],
+
+    'statuses' => [
+        \Modules\ProductManagement\Entities\Subcategory::ACTIVE => 'Active',
+        \Modules\ProductManagement\Entities\Subcategory::INACTIVE => 'Inactive',
+    ]
 ];

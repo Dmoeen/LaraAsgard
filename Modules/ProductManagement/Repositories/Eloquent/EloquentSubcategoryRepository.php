@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 use Modules\ProductManagement\Entities\Category;
 use Modules\ProductManagement\Entities\Subcategory;
+use Modules\ProductManagement\Events\SubcategoryWasCreated;
 use Modules\ProductManagement\Repositories\SubcategoryRepository;
 
 class EloquentSubcategoryRepository extends EloquentBaseRepository implements SubcategoryRepository
@@ -29,4 +30,18 @@ class EloquentSubcategoryRepository extends EloquentBaseRepository implements Su
 
         return $res;
     }
+
+    public function create($data)
+    {
+        $subcategory= $this->model->create($data);
+
+        event(new SubcategoryWasCreated($subcategory,$data));
+
+        return $subcategory;
+    }
+    public function getSubcategory(){
+        return $this->model;
+    }
+
+
 }

@@ -2,12 +2,21 @@
 
 namespace Modules\ProductManagement\Entities;
 
-use Dimsav\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Media\Support\Traits\MediaRelation;
 
 class Subcategory extends Model
 {
-//    use Translatable;
+
+    use MediaRelation;
+
+    const ACTIVE = 1;
+    const INACTIVE = 0;
+
+    const STATUSES = [
+        self::ACTIVE   => 'Active',
+        self::INACTIVE => 'Inactive',
+    ];
 
     protected $table = 'productmanagement__subcategories';
 
@@ -19,6 +28,25 @@ class Subcategory extends Model
         'status'
     ];
 
+    public function getSubcategoryImages()
+    {
+
+        return $this->filesByZone('subcategory_images')->get();
+    }
+
+    public function getStatusTextAttribute()
+    {
+        $status = trans('productmanagement::subcategories.statuses.'.$this->status);
+        return ucfirst($status);
+    }
+
+    public function getStatusHtmlAttribute()
+    {
+        if($this->status) {
+            return '<div class="cell"><i class="fa fa-circle text-success"></i></div>';
+        }
+        return '<div class="cell"><i class="fa fa-circle text-danger"></i></div>';
+    }
 
 
 }

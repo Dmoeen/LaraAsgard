@@ -24,6 +24,7 @@
                         <div class="tab-pane {{ locale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
                             @include('productmanagement::admin.subcategories.partials.edit-fields', ['lang' => $locale])
                         </div>
+                            @mediaSingle('subcategory_images',$subcategory)
                     @endforeach
 
                     <div class="box-footer">

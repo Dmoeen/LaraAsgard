@@ -1,5 +1,6 @@
 <div class="box-body">
     <p>
-        Your fields //
+        {!! Form::normalInput('name', 'SubCategory Name',$errors) !!}
+        {!! Form::normalCheckbox('status', 'Status', $errors) !!}
     </p>
 </div>

@@ -41,30 +41,12 @@
                             <?php if (isset($subcategories)): ?>
                             <?php foreach ($subcategories as $subcategory): ?>
                             <tr>
-                                <td>
-                                    <a href="{{ route('admin.productmanagement.subcategory.edit', [$subcategory->id]) }}">
-                                        {{ $subcategory->c_name }}
-
-                                    </a>
-                                </td>  <td>
-                                    <a href="{{ route('admin.productmanagement.subcategory.edit', [$subcategory->id]) }}">
-                                        {{ $subcategory->name }}
-                                    </a>
-                                </td>  <td>
-                                    {{--<a href="{{ route('admin.productmanagement.subcategory.edit', [$subcategory->id]) }}">--}}
-                                        <img class="img-thumbnail" src="http://jazbafoods.com.pk/photos/{{ $subcategory->photo }}" alt="Smiley face" height="62" width="162">
-                                    {{--</a>--}}
-                                </td>
-                                <td>
-                                        {{ $subcategory->status_html }}
-
-                                </td>  <td>
-                                    <a href="{{ route('admin.productmanagement.subcategory.edit', [$subcategory->id]) }}">
-                                        {{ $subcategory->created_at }}
-                                    </a>
-                                </td>
-                                <td>
-                                    <div class="btn-group">
+                                <td><strong>{{ $subcategory->c_name }}</strong></td>
+                                <td><strong>{{ $subcategory->name }}</strong></td>
+                                <td><img class="img-thumbnail" src="http://jazbafoods.com.pk/photos/{{ $subcategory->photo }}" alt="Smiley face" height="62" width="62"></td>
+                                <td>{!! $subcategory->status_html !!}</td>
+                                <td><strong>{{ $subcategory->created_at }}</strong></td>
+                                <td><div class="btn-group">
                                         <a href="{{ route('admin.productmanagement.subcategory.edit', [$subcategory->id]) }}" class="btn btn-default btn-flat"><i class="fa fa-pencil"></i></a>
                                         <button class="btn btn-danger btn-flat" data-toggle="modal" data-target="#modal-delete-confirmation" data-action-target="{{ route('admin.productmanagement.subcategory.destroy', [$subcategory->id]) }}"><i class="fa fa-trash"></i></button>
                                     </div>
@@ -75,6 +57,10 @@
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th>Category</th>
+                                <th>Name</th>
+                                <th>Photo</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>

@@ -23,8 +23,11 @@
                         <?php $i++; ?>
                         <div class="tab-pane {{ locale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
                             @include('productmanagement::admin.events.partials.create-fields', ['lang' => $locale])
+
                         </div>
-                    @endforeach
+
+
+                        @endforeach
 
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>
