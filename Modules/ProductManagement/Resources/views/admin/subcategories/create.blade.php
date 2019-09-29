@@ -12,9 +12,9 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.productmanagement.subcategory.store'], 'method' => 'post']) !!}
+    {!! Form::open(['route' => ['admin.productmanagement.subcategory.store'], 'method' => 'post','enctype'=>"multipart/form-data"]) !!}
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-6">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -24,7 +24,6 @@
                         <div class="tab-pane {{ locale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
                             @include('productmanagement::admin.subcategories.partials.create-fields', ['lang' => $locale])
                         </div>
-                            @mediaSingle('subcategory_images',$subcategory)
                     @endforeach
 
                     <div class="box-footer">
@@ -34,7 +33,7 @@
                 </div>
             </div> {{-- end nav-tabs-custom --}}
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
             <div class="box box-primary">
                 <div class="box-body">
             <div class="form-group"{{ $errors->has("category_id") ? ' has-error' : '' }} >
@@ -77,7 +76,9 @@
                 checkboxClass: 'icheckbox_flat-blue',
                 radioClass: 'iradio_flat-blue'
             });
-            $('#category-id').select2();
+            $('.select2').select2();
+
+
         });
     </script>
 @endpush

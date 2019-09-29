@@ -29,6 +29,11 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
+                                <th>Name</th>
+                                <th>Photo</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -38,6 +43,26 @@
                             <?php foreach ($events as $event): ?>
                             <tr>
                                 <td>
+                                    <a href="{{ route('admin.productmanagement.event.edit', [$event->id]) }}">
+                                        {{ $event->name }}
+                                    </a>
+                                </td>
+                                <td>
+                                <img class="img-thumbnail" src="{{URL::to('/').'/images/'. $event->image_name}}" alt="Smiley face" height="62" width="62">
+                                </td>
+                                    <td>
+                                    <a>
+                                        {{ $event->start_date }}
+                                    </a>
+                                </td>    <td>
+                                    <a >
+                                        {{ $event->end_date }}
+                                    </a>
+                                </td>   <td>
+                                    <a >
+                                        {!!   $event->status_html!!}
+                                    </a>
+                                </td>    <td>
                                     <a href="{{ route('admin.productmanagement.event.edit', [$event->id]) }}">
                                         {{ $event->created_at }}
                                     </a>
@@ -54,6 +79,11 @@
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th>Name</th>
+                                <th>Photo</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>

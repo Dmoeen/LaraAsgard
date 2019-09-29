@@ -8,7 +8,7 @@ class CreateCategoryRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return ['name' => 'required'];
     }
 
     public function translationRules()

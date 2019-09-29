@@ -14,7 +14,7 @@
 @section('content')
     {!! Form::open(['route' => ['admin.productmanagement.category.update', $category->id], 'method' => 'put']) !!}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-3">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">

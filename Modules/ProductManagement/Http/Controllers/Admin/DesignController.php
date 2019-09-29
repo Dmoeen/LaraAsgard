@@ -31,9 +31,9 @@ class DesignController extends AdminBaseController
      */
     public function index()
     {
-        //$designs = $this->design->all();
+      $designs = $this->design->all();
 
-        return view('productmanagement::admin.designs.index', compact(''));
+        return view('productmanagement::admin.designs.index', compact('designs'));
     }
 
     /**

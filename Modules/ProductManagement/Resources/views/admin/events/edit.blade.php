@@ -14,7 +14,7 @@
 @section('content')
     {!! Form::open(['route' => ['admin.productmanagement.event.update', $event->id], 'method' => 'put']) !!}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -33,6 +33,7 @@
                 </div>
             </div> {{-- end nav-tabs-custom --}}
         </div>
+
     </div>
     {!! Form::close() !!}
 @stop
@@ -62,6 +63,9 @@
             $('input[type="checkbox"].flat-blue, input[type="radio"].flat-blue').iCheck({
                 checkboxClass: 'icheckbox_flat-blue',
                 radioClass: 'iradio_flat-blue'
+            });
+            $('.datepicker').datepicker({
+                format: 'dd/mm/yyyy'
             });
         });
     </script>

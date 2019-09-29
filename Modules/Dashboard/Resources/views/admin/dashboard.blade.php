@@ -3,7 +3,7 @@
 @section('content-header')
     <h1 class="pull-left">
         {{ trans('dashboard::dashboard.name') }}
-    </h1>
+   </h1>
     <div class="btn-group pull-right">
         <a class="btn btn-default" id="edit-grid" data-mode="0" href="#">{{ trans('dashboard::dashboard.edit grid') }}</a>
         <a class="btn btn-default" id="reset-grid" href="{{ route('dashboard.grid.reset')  }}">{{ trans('dashboard::dashboard.reset grid') }}</a>

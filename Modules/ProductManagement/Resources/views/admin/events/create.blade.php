@@ -14,7 +14,7 @@
 @section('content')
     {!! Form::open(['route' => ['admin.productmanagement.event.store'], 'method' => 'post']) !!}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -58,6 +58,7 @@
                     { key: 'b', route: "<?= route('admin.productmanagement.event.index') ?>" }
                 ]
             });
+
         });
     </script>
     <script>
@@ -66,6 +67,11 @@
                 checkboxClass: 'icheckbox_flat-blue',
                 radioClass: 'iradio_flat-blue'
             });
+            $('.datepicker').datepicker({
+                format: 'dd/mm/yyyy'
+            });
         });
     </script>
+
+
 @endpush

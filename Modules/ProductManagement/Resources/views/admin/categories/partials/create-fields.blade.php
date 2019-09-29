@@ -1,5 +1,5 @@
 <div class="box-body">
     <p>
-        Your fields //
+        {!! Form::normalInput('name', 'Category Name',$errors) !!}
     </p>
 </div>

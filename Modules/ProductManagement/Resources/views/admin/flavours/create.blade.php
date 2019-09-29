@@ -14,7 +14,7 @@
 @section('content')
     {!! Form::open(['route' => ['admin.productmanagement.flavour.store'], 'method' => 'post']) !!}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -54,6 +54,9 @@
                 actions: [
                     { key: 'b', route: "<?= route('admin.productmanagement.flavour.index') ?>" }
                 ]
+            });
+            $('.datepicker').datepicker({
+                format: 'dd/mm/yyyy'
             });
         });
     </script>

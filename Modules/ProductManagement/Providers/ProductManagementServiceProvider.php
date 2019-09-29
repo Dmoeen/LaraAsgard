@@ -2,6 +2,7 @@
 
 namespace Modules\ProductManagement\Providers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Core\Events\BuildingSidebar;
@@ -176,6 +177,17 @@ class ProductManagementServiceProvider extends ServiceProvider
                 }
 
                 return new \Modules\ProductManagement\Repositories\Cache\CacheColorDecorator($repository);
+            }
+        );   $this->app->bind(
+            'Modules\ProductManagement\Repositories\GlobalRepository',
+            function () {
+                $repository = new \Modules\ProductManagement\Repositories\Eloquent\EloquentGlobalRepository(new \Modules\ProductManagement\Entities\Color());
+
+                if (! config('app.cache')) {
+                    return $repository;
+                }
+
+                return new \Modules\ProductManagement\Repositories\Cache\CacheGlobalDecorator($repository);
             }
         );
 // add bindings

@@ -4,6 +4,7 @@ namespace Modules\ProductManagement\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\URL;
 use Modules\ProductManagement\Entities\Event;
 use Modules\ProductManagement\Http\Requests\CreateEventRequest;
 use Modules\ProductManagement\Http\Requests\UpdateEventRequest;
@@ -31,9 +32,9 @@ class EventController extends AdminBaseController
      */
     public function index()
     {
-        //$events = $this->event->all();
+        $events = $this->event->getEvents();
 
-        return view('productmanagement::admin.events.index', compact(''));
+        return view('productmanagement::admin.events.index', compact('events'));
     }
 
     /**
@@ -68,6 +69,8 @@ class EventController extends AdminBaseController
      */
     public function edit(Event $event)
     {
+
+        $event=$this->event->getEventById($event->id);
         return view('productmanagement::admin.events.edit', compact('event'));
     }
 

@@ -8,7 +8,12 @@ class CreateSubcategoryRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'image' => 'file|image|max:5000',
+            'category_id' => 'required',
+        ];
     }
 
     public function translationRules()

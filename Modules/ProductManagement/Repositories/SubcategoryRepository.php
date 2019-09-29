@@ -9,4 +9,5 @@ interface SubcategoryRepository extends BaseRepository
     public function getcategory();
     public function getAllCategoriesForDropDown();
     public function getSubcategory();
+    public function getSubcategoryById($id);
 }

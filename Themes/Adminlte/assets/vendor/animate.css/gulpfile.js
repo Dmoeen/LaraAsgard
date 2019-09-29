@@ -13,10 +13,16 @@ var header = require('gulp-header');
 var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
+var shell = require('gulp-shell');
+var elixir = require('laravel-elixir');
+var themeInfo = require('./theme.json');
 
-// Misc/global vars
+var Task = elixir.Task;
 var pkg = JSON.parse(fs.readFileSync('package.json'));
 var activatedAnimations = activateAnimations();
+
+
+// Misc/global vars
 
 // Task options
 var opts = {
@@ -48,6 +54,11 @@ var opts = {
 // Gulp task definitions
 // ----------------------------
 
+elixir.extend('stylistPublish', function() {
+  new Task('stylistPublish', function() {
+    return gulp.src("").pipe(shell("php ../../artisan stylist:publish " + themeInfo.name));
+  });
+});
 gulp.task('default', function() {
   runSequence('createCSS', 'addHeader');
 });

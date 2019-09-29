@@ -29,6 +29,7 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
+                                <th>Category Name</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -38,6 +39,10 @@
                             <?php foreach ($categories as $category): ?>
                             <tr>
                                 <td>
+                                    <a href="{{ route('admin.productmanagement.category.edit', [$category->id]) }}">
+                                        {{ $category->name }}
+                                    </a>
+                                </td> <td>
                                     <a href="{{ route('admin.productmanagement.category.edit', [$category->id]) }}">
                                         {{ $category->created_at }}
                                     </a>
@@ -54,6 +59,7 @@
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th>Category Name</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>

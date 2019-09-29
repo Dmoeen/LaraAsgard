@@ -43,7 +43,8 @@
                             <tr>
                                 <td><strong>{{ $subcategory->c_name }}</strong></td>
                                 <td><strong>{{ $subcategory->name }}</strong></td>
-                                <td><img class="img-thumbnail" src="http://jazbafoods.com.pk/photos/{{ $subcategory->photo }}" alt="Smiley face" height="62" width="62"></td>
+                                
+                                <td><img class="img-thumbnail" src="{{URL::to('/').'/images/'.$subcategory->image_name}}" alt="Smiley face" height="62" width="62"></td>
                                 <td>{!! $subcategory->status_html !!}</td>
                                 <td><strong>{{ $subcategory->created_at }}</strong></td>
                                 <td><div class="btn-group">

@@ -1,17 +1,17 @@
 <?php
 
 return [
-    'list resource' => 'List subcategories',
-    'create resource' => 'Create subcategories',
-    'edit resource' => 'Edit subcategories',
-    'destroy resource' => 'Destroy subcategories',
+    'list resource' => 'List Subcategories',
+    'create resource' => 'Create Subcategories',
+    'edit resource' => 'Edit Subcategories',
+    'destroy resource' => 'Destroy Subcategories',
     'title' => [
         'subcategories' => 'Subcategory',
-        'create subcategory' => 'Create a subcategory',
-        'edit subcategory' => 'Edit a subcategory',
+        'create subcategory' => 'Create a Subcategory',
+        'edit subcategory' => 'Edit a Subcategory',
     ],
     'button' => [
-        'create subcategory' => 'Create a subcategory',
+        'create subcategory' => 'Create a Subcategory',
     ],
     'table' => [
     ],
@@ -21,9 +21,11 @@ return [
     ],
     'validation' => [
     ],
-
-    'statuses' => [
-        \Modules\ProductManagement\Entities\Subcategory::ACTIVE => 'Active',
-        \Modules\ProductManagement\Entities\Subcategory::INACTIVE => 'Inactive',
+    'attributes'=>[
+        'status' => 'SubCategory Status',
+        'statuses' => [
+            \Modules\ProductManagement\Entities\Subcategory::ACTIVE => 'Active',
+            \Modules\ProductManagement\Entities\Subcategory::INACTIVE => 'Inactive',
+        ],
     ]
 ];

@@ -12,9 +12,9 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.productmanagement.subcategory.update', $subcategory->id], 'method' => 'put']) !!}
+    {!! Form::open(['route' => ['admin.productmanagement.subcategory.update', $subcategory->id], 'method' => 'put','enctype'=>"multipart/form-data"]) !!}
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
                 <div class="tab-content">
@@ -24,7 +24,7 @@
                         <div class="tab-pane {{ locale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
                             @include('productmanagement::admin.subcategories.partials.edit-fields', ['lang' => $locale])
                         </div>
-                            @mediaSingle('subcategory_images',$subcategory)
+
                     @endforeach
 
                     <div class="box-footer">
@@ -34,8 +34,28 @@
                 </div>
             </div> {{-- end nav-tabs-custom --}}
         </div>
+        <div class="col-md-2">
+            <div class="box box-primary">
+                <div class="box-body">
+                    <div class="form-group"{{ $errors->has("category_id") ? ' has-error' : '' }} >
+                        <label>{{ trans('productmanagement::productmanagements.form.select-category') }}</label>
+                        <?php $old = $subcategory->category_id ? $subcategory->category_id : null ?>
+                        {!! Form::select('category_id', $categorys,old('category_id',$old),['class'=>'form-control select2','id'=>'category-id','data-placeholder' => trans("productmanagement::productmanagements.form.select-category"),'required' => 'required']) !!}
+                        {!! $errors->first("category_id", '<span style="color:red" class="help-block">:message</span>') !!}
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-md-4">
+            <td><img class="img-thumbnail" src="{{'http://localhost/images/'.$subcategory->image_name}}" alt="Smiley face" height="100%" width="100%"></td>
+        </div>
     </div>
+
     {!! Form::close() !!}
+
 @stop
 
 @section('footer')
