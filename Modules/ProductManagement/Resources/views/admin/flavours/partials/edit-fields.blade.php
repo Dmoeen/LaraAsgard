@@ -25,16 +25,13 @@
         {!! $errors->first("status", '<span style="color:red" class="help-block">:message</span>') !!}
     </div>
 
-    <div class="form-group">
-        <label>Expiry Date:</label>
         <div class="input-group date">
             <div class="input-group-addon">
                 <i class="fa fa-calendar"></i>
             </div>
-            <input type="text" name="expiry_date" value="{{$flavour->expiry_date}}" class="form-control pull-right datepicker">
+            {{ Form::text('expiry_date', 'Expiry Date', array('class' => 'datepicker'),$flavour) }}
         </div>
-        <!-- /.input group -->
-    </div>
+
 
 
     <div class="form-group  d-flex flex-column py-3">
@@ -43,7 +40,7 @@
         <div>{{$errors->first('image')}}</div>
     </div>
     <div>
-        <td><img class="img-thumbnail" src="{{'http://localhost/images/'.$flavour->image_name}}" alt="Smiley face" height="150" width="150"></td>
+        <td><img class="img-thumbnail" src="{{URL::to('/').'/images/'.$flavour->image_name}}" alt="Smiley face" height="150" width="150"></td>
     </div>
 </div>
 

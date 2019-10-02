@@ -3,12 +3,11 @@
 namespace Modules\ProductManagement\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\Media\Support\Traits\MediaRelation;
 
 class Subcategory extends Model
 {
 
-    use MediaRelation;
+
 
     const ACTIVE = 1;
     const INACTIVE = 0;

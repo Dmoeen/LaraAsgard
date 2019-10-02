@@ -12,28 +12,17 @@
         {{trans('productmanagement::subcategories.attributes.statuses.0')}}
         {!! $errors->first("status", '<span style="color:red" class="help-block">:message</span>') !!}
     </div>
-    <div class="form-group">
-        <label>Start Date:</label>
-
-        <div class="input-group date">
-            <div class="input-group-addon">
-                <i class="fa fa-calendar"></i>
-            </div>
-            <input type="text" name="start_date" class="form-control pull-right datepicker" >
+    <div class="input-group date">
+        <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
         </div>
-        <!-- /.input group -->
+        {{ Form::text('start_date', 'Start Date', array('class' => 'datepicker'),$errors) }}
     </div>
-
-    <div class="form-group">
-        <label>End Date :</label>
-
-        <div class="input-group date">
-            <div class="input-group-addon">
-                <i class="fa fa-calendar"></i>
-            </div>
-            <input type="text" name="end_date" class="form-control pull-right datepicker" >
+    <div class="input-group date">
+        <div class="input-group-addon">
+            <i class="fa fa-calendar"></i>
         </div>
-        <!-- /.input group -->
+        {{ Form::text('end_date', 'End Date', array('class' => 'datepicker'),$errors) }}
     </div>
     </p>
     <div class="form-group  d-flex flex-column py-3">

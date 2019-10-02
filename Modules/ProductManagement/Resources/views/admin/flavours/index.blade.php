@@ -29,6 +29,11 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
+                                <th>Name</th>
+                                <th>Expiry Date</th>
+                                <th>Photo</th>
+                                <th>Price</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -39,11 +44,22 @@
                             <tr>
                                 <td>
                                     <a href="{{ route('admin.productmanagement.flavour.edit', [$flavour->id]) }}">
-                                        {{ $flavour->created_at }}
+                                        {{ $flavour->name }}
+                                    </a>
+                                </td>   <td>
+                                    <a >
+                                        {{ $flavour->expiry_date }}
                                     </a>
                                 </td>
-                                <td>
-                                    <div class="btn-group">
+                                <td> <img class="img-thumbnail" src="{{URL::to('/').'/images/'. $flavour->image_name}}" alt="Smiley face" height="62" width="62"></td>
+                                <td><a >{{ $flavour->price }}</a></td>
+                                <td><a href="{{ route('admin.productmanagement.flavour.edit', [$flavour->id]) }}">
+                                        {!! $flavour->status_html !!}</a>
+                                </td>
+                                <td><a href="{{ route('admin.productmanagement.flavour.edit', [$flavour->id]) }}">
+                                        {{ $flavour->created_at }}</a>
+                                </td>
+                                <td><div class="btn-group">
                                         <a href="{{ route('admin.productmanagement.flavour.edit', [$flavour->id]) }}" class="btn btn-default btn-flat"><i class="fa fa-pencil"></i></a>
                                         <button class="btn btn-danger btn-flat" data-toggle="modal" data-target="#modal-delete-confirmation" data-action-target="{{ route('admin.productmanagement.flavour.destroy', [$flavour->id]) }}"><i class="fa fa-trash"></i></button>
                                     </div>
@@ -54,6 +70,11 @@
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th>Name</th>
+                                <th>Expiry Date</th>
+                                <th>Photo</th>
+                                <th>Price</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>

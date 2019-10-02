@@ -49,4 +49,8 @@ class EloquentGlobalRepository extends EloquentBaseRepository implements GlobalR
         $newImage->image_tag = $tag;
         $any->Images()->update($newImage->toArray());
     }
+    public function deleteImage($any){
+        $previousImage = $_SERVER['DOCUMENT_ROOT']."/storage/media/{$any}";
+        if (file_exists($previousImage)) {unlink($previousImage);}
+    }
 }

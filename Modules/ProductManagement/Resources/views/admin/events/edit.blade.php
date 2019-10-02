@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.productmanagement.event.update', $event->id], 'method' => 'put']) !!}
+    {!! Form::open(['route' => ['admin.productmanagement.event.update', $event->id], 'method' => 'put','enctype'=>"multipart/form-data"]) !!}
     <div class="row">
         <div class="col-md-6">
             <div class="nav-tabs-custom">
@@ -65,7 +65,7 @@
                 radioClass: 'iradio_flat-blue'
             });
             $('.datepicker').datepicker({
-                format: 'dd/mm/yyyy'
+            dateFormat: 'yy-mm-dd'
             });
         });
     </script>

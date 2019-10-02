@@ -3,6 +3,7 @@
 namespace Modules\ProductManagement\Http\Controllers\Admin;
 
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
+use Modules\ProductManagement\Entities\AccessImages;
 use Modules\ProductManagement\Entities\Subcategory;
 use Modules\ProductManagement\Http\Requests\CreateSubcategoryRequest;
 use Modules\ProductManagement\Http\Requests\UpdateSubcategoryRequest;
@@ -34,8 +35,8 @@ class SubcategoryController extends AdminBaseController
     public function index()
     {
         $subcategories = $this->subcategory->getcategory();
-        $subcategory=$this->subcategory->all();
-        return view('productmanagement::admin.subcategories.index', compact('subcategory','subcategories'));
+//        $subcategory=$this->subcategory->all();
+        return view('productmanagement::admin.subcategories.index', compact('subcategories'));
     }
 
     public function create()
@@ -77,7 +78,12 @@ class SubcategoryController extends AdminBaseController
 
     public function destroy(Subcategory $subcategory)
     {
-        $this->subcategory->destroy($subcategory);
+
+            $this->subcategory->destroy($subcategory);
+            $image=$subcategory->Images->image_name;
+            $subcategory->Images->delete();
+            $this->globalRepository->deleteImage($image);
+
         return redirect()->route('admin.productmanagement.subcategory.index')
             ->withSuccess(trans('core::core.messages.resource deleted', ['name' => trans('productmanagement::subcategories.title.subcategories')]));
     }

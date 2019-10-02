@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.productmanagement.flavour.store'], 'method' => 'post']) !!}
+    {!! Form::open(['route' => ['admin.productmanagement.flavour.store'], 'method' => 'post','enctype'=>"multipart/form-data"]) !!}
     <div class="row">
         <div class="col-md-6">
             <div class="nav-tabs-custom">
@@ -56,7 +56,7 @@
                 ]
             });
             $('.datepicker').datepicker({
-                format: 'dd/mm/yyyy'
+                dateFormat: 'yy-mm-dd'
             });
         });
     </script>

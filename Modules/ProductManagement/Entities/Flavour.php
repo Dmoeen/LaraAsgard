@@ -18,4 +18,12 @@ class Flavour extends Model
         'price',
         'status'
     ];
+    public function  Images(){
+        return $this->hasOne(AccessImages::class ,'access_id');
+    }
+    public function getStatusHtmlAttribute()
+    {
+        if($this->status) {return '<div class="cell"><i class="fa fa-circle text-success"></i></div>';}
+        return '<div class="cell"><i class="fa fa-circle text-danger"></i></div>';
+    }
 }

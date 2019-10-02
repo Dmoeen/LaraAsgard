@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.productmanagement.flavour.update', $flavour->id], 'method' => 'put']) !!}
+    {!! Form::open(['route' => ['admin.productmanagement.flavour.update', $flavour->id], 'method' => 'put','enctype'=>"multipart/form-data"]) !!}
     <div class="row">
         <div class="col-md-12">
             <div class="nav-tabs-custom">
@@ -54,6 +54,9 @@
                 actions: [
                     { key: 'b', route: "<?= route('admin.productmanagement.flavour.index') ?>" }
                 ]
+            });
+            $('.datepicker').datepicker({
+                dateFormat: 'yy-mm-dd'
             });
         });
     </script>

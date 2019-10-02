@@ -8,7 +8,12 @@ class UpdateEventRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'start_date'=>'required',
+            'end_date'=>'required',
+        ];
     }
 
     public function translationRules()

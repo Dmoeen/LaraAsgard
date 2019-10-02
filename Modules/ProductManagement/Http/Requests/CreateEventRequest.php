@@ -8,7 +8,13 @@ class CreateEventRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'start_date'=>'required',
+            'end_date'=>'required',
+            'image' => 'file|image|max:5000',
+        ];
     }
 
     public function translationRules()

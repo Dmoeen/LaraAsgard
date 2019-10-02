@@ -65,7 +65,8 @@
 
     @routes
 </head>
-<body class="{{ config('asgard.core.core.skin', 'skin-blue') }} sidebar-mini" style="padding-bottom: 0 !important;">
+{{--{{ config('asgard.core.core.skin', 'skin-yellow') }}--}}
+<body class="skin-purple sidebar-mini" style="padding-bottom: 0 !important;">
 <div class="wrapper" id="app">
     <header class="main-header">
         <a href="{{ route('dashboard.index') }}" class="logo">
@@ -139,6 +140,10 @@
                 customConfig: '{{ config('asgard.core.core.ckeditor-config-file-path') }}'
             });
 
+
+        });
+        $(document).ready(function(){
+            $(window).scrollTop(0);
         });
     </script>
 <?php endif; ?>

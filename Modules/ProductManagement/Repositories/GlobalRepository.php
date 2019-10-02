@@ -12,4 +12,5 @@ interface GlobalRepository extends BaseRepository
 {
     public function updateImage(Model $any,BaseFormRequest $request,$tag);
     public function storeImage(Model $any,BaseFormRequest $request,$tag);
+    public function deleteImage($any);
 }
