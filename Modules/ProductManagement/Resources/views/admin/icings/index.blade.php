@@ -29,6 +29,9 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -38,6 +41,18 @@
                             <?php foreach ($icings as $icing): ?>
                             <tr>
                                 <td>
+                                    <a href="{{ route('admin.productmanagement.icing.edit', [$icing->id]) }}">
+                                        {{ $icing->name }}
+                                    </a>
+                                </td>  <td>
+                                    <a href="{{ route('admin.productmanagement.icing.edit', [$icing->id]) }}">
+                                        {{ $icing->price }} Rs
+                                    </a>
+                                </td>  <td>
+                                    <a href="{{ route('admin.productmanagement.icing.edit', [$icing->id]) }}">
+                                        {!!  $icing->status_html !!}
+                                    </a>
+                                </td>  <td>
                                     <a href="{{ route('admin.productmanagement.icing.edit', [$icing->id]) }}">
                                         {{ $icing->created_at }}
                                     </a>
@@ -54,6 +69,9 @@
                             </tbody>
                             <tfoot>
                             <tr>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Status</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>

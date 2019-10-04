@@ -8,7 +8,12 @@ class UpdateDesignRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'price'=>'required',
+            'image' => 'file|image|max:5000',
+        ];
     }
 
     public function translationRules()

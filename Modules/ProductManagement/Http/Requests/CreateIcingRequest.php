@@ -8,7 +8,11 @@ class CreateIcingRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'price'=>'required',
+        ];
     }
 
     public function translationRules()

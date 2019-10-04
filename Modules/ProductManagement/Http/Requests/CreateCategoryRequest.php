@@ -8,7 +8,7 @@ class CreateCategoryRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return ['name' => 'required'];
+        return ['name' => 'required|unique:productmanagement__categories,name,NULL',];
     }
 
     public function translationRules()

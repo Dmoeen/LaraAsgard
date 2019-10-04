@@ -1,5 +1,5 @@
 <div class="box-body">
-    <p>
+
         {!! Form::normalInput('name', 'SubCategory Name',$errors) !!}
 
 
@@ -19,7 +19,7 @@
 
 
 
-    </p>
+
     <div class="form-group  d-flex flex-column py-3">
         <label for="image"> Subcategory Image</label>
         <input type="file" name="image" class="py-3"/>

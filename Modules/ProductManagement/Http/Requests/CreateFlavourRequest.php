@@ -8,7 +8,12 @@ class CreateFlavourRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'expiry_date'=>'required',
+            'image' => 'file|image|max:5000',
+        ];
     }
 
     public function translationRules()

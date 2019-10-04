@@ -16,4 +16,10 @@ class Icing extends Model
         'price',
         'status'
     ];
+
+    public function getStatusHtmlAttribute()
+    {
+        if($this->status) {return '<div class="cell"><i class="fa fa-circle text-success"></i></div>';}
+        return '<div class="cell"><i class="fa fa-circle text-danger"></i></div>';
+    }
 }

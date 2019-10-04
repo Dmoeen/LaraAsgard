@@ -8,7 +8,11 @@ class UpdateFlavourRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name' => 'required',
+            'status' => 'required',
+            'expiry_date'=>'required',
+        ];
     }
 
     public function translationRules()

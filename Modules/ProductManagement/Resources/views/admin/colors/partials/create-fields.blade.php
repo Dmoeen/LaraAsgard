@@ -29,6 +29,14 @@
         {{trans('productmanagement::subcategories.attributes.statuses.0')}}
         {!! $errors->first("status", '<span style="color:red" class="help-block">:message</span>') !!}
     </div>
+
+
+    <div class="form-group d-flex"{{ $errors->has("type") ? ' has-error' : '' }} >
+        <label>Color Type</label><br/>
+        <input id="type" name="type" type="radio" class="flat-blue" value="BASE"/>BASE
+        <input id="type" name="type" type="radio" class="flat-blue" value="BORDER"/>BORDER
+        {!! $errors->first("type", '<span style="color:red" class="help-block">:message</span>') !!}
+    </div>
 </div>
 
 

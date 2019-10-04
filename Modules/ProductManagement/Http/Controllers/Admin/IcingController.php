@@ -31,9 +31,9 @@ class IcingController extends AdminBaseController
      */
     public function index()
     {
-        //$icings = $this->icing->all();
+     $icings = $this->icing->all();
 
-        return view('productmanagement::admin.icings.index', compact(''));
+        return view('productmanagement::admin.icings.index', compact('icings'));
     }
 
     /**

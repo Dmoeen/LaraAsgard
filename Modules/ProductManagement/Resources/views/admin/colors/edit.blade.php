@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-    {!! Form::open(['route' => ['admin.productmanagement.color.update', $color->id], 'method' => 'put']) !!}
+    {!! Form::open(['route' => ['admin.productmanagement.color.update', $color->id], 'method' => 'put','enctype'=>"multipart/form-data"]) !!}
     <div class="row">
         <div class="col-md-12">
             <div class="nav-tabs-custom">

@@ -8,7 +8,13 @@ class CreateColorRequest extends BaseFormRequest
 {
     public function rules()
     {
-        return [];
+        return [
+            'name'=>'required',
+            'price'=>'required',
+            'status'=>'required',
+            'type'=>'required',
+            'image'=>'required|max:5000',
+        ];
     }
 
     public function translationRules()

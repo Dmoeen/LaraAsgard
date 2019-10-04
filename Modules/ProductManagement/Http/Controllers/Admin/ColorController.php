@@ -43,6 +43,7 @@ class ColorController extends AdminBaseController
      */
     public function create()
     {
+
         return view('productmanagement::admin.colors.create');
     }
 
@@ -54,9 +55,9 @@ class ColorController extends AdminBaseController
      */
     public function store(CreateColorRequest $request)
     {
-        $this->color->create($request->all());
 
-        return redirect()->route('admin.productmanagement.color.index')
+          $this->color->create($request->all());
+          return redirect()->route('admin.productmanagement.color.index')
             ->withSuccess(trans('core::core.messages.resource created', ['name' => trans('productmanagement::colors.title.colors')]));
     }
 
