@@ -75,11 +75,8 @@ class UserController extends BaseUserModuleController
     public function store(CreateUserRequest $request)
     {
         $data = $this->mergeRequestWithPermissions($request);
+        $this->user->createWithRoles($data, $request->roles, true);
 
-//        $this->user->createWithRoles($data, $request->roles, true);
-        $institute=array(0=>1);
-
-       dd($this->user->createWithInstitute($data, $institute, true));
 
         return redirect()->route('admin.user.user.index')
             ->withSuccess(trans('user::messages.user created'));

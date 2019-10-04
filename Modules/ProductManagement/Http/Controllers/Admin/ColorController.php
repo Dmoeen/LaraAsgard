@@ -31,9 +31,9 @@ class ColorController extends AdminBaseController
      */
     public function index()
     {
-        //$colors = $this->color->all();
+        $colors = $this->color->all();
 
-        return view('productmanagement::admin.colors.index', compact(''));
+        return view('productmanagement::admin.colors.index', compact('colors'));
     }
 
     /**
