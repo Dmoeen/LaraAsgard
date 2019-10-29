@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e7fb8b8b3a28353bf0ca23f26e7fba2",
+    "content-hash": "36bd5eb945c7f01b063289230fc76d06",
     "packages": [
         {
             "name": "cartalyst/sentinel",
@@ -1070,8 +1070,8 @@
             "authors": [
                 {
                     "name": "Nicolas Widart",
-                    "role": "Developer",
-                    "email": "info@asgardcms.com"
+                    "email": "info@asgardcms.com",
+                    "role": "Developer"
                 }
             ],
             "description": "An AsgardCMS administration theme",
@@ -1268,8 +1268,8 @@
             "authors": [
                 {
                     "name": "Nicolas Widart",
-                    "role": "Developer",
-                    "email": "info@asgardcms.com"
+                    "email": "info@asgardcms.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Media module for AsgardCMS. Handles the media library.",
@@ -1323,8 +1323,8 @@
             "authors": [
                 {
                     "name": "Nicolas Widart",
-                    "role": "Developer",
-                    "email": "info@asgardcms.com"
+                    "email": "info@asgardcms.com",
+                    "role": "Developer"
                 }
             ],
             "description": "Menu module for AsgardCMS. Handles all the menus.",
@@ -5440,34 +5440,34 @@
         },
         {
             "name": "league/commonmark",
-            "version": "0.15.7",
+            "version": "0.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "36d82f166e441dfa28643f8d01dd8bdd3a579adf"
+                "reference": "b1ec41ce15c3bd6f7cbe86a645b3efc78d927446"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/36d82f166e441dfa28643f8d01dd8bdd3a579adf",
-                "reference": "36d82f166e441dfa28643f8d01dd8bdd3a579adf",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/b1ec41ce15c3bd6f7cbe86a645b3efc78d927446",
+                "reference": "b1ec41ce15c3bd6f7cbe86a645b3efc78d927446",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=5.4.8"
+                "php": ">=5.6.5"
             },
             "replace": {
                 "colinodell/commonmark-php": "*"
             },
             "require-dev": {
                 "cebe/markdown": "~1.0",
+                "commonmark/commonmark.js": "0.28",
                 "erusev/parsedown": "~1.0",
-                "jgm/commonmark": "0.28",
                 "michelf/php-markdown": "~1.4",
-                "mikehaertl/php-shellcommand": "~1.2.0",
-                "phpunit/phpunit": "~4.3|~5.0",
-                "scrutinizer/ocular": "~1.1",
-                "symfony/finder": "~2.3|~3.0"
+                "mikehaertl/php-shellcommand": "^1.2",
+                "phpunit/phpunit": "^5.7.27|^6.5.14",
+                "scrutinizer/ocular": "^1.1",
+                "symfony/finder": "^3.0|^4.0"
             },
             "suggest": {
                 "league/commonmark-extras": "Library of useful extensions including smart punctuation"
@@ -5478,7 +5478,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.16-dev"
+                    "dev-master": "0.19-dev"
                 }
             },
             "autoload": {
@@ -5493,19 +5493,19 @@
             "authors": [
                 {
                     "name": "Colin O'Dell",
-                    "role": "Lead Developer",
                     "email": "colinodell@gmail.com",
-                    "homepage": "https://www.colinodell.com"
+                    "homepage": "https://www.colinodell.com",
+                    "role": "Lead Developer"
                 }
             ],
-            "description": "Markdown parser for PHP based on the CommonMark spec",
+            "description": "PHP Markdown parser based on the CommonMark spec",
             "homepage": "https://github.com/thephpleague/commonmark",
             "keywords": [
                 "commonmark",
                 "markdown",
                 "parser"
             ],
-            "time": "2017-10-26T15:41:07+00:00"
+            "time": "2019-03-21T22:47:25+00:00"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -5943,18 +5943,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "role": "Developer",
-                    "email": "sebastian@phpeople.de"
+                    "email": "sebastian@phpeople.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "Developer",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -7311,8 +7311,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
